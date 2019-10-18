@@ -13,11 +13,11 @@ public class PaymentCalculator {
     }
 
     public static double netYearPayment(Employee employee) {
-        double grossYearSalary = employee.getSalary();
+        double grossSalary = employee.getSalary();
         double tax = (ZUS + RENT_INSURANCE + MEDICAL_INSURANCE_025 + MEDICAL_INSURANCE_025 + MEDICAL_INSURANCE_078 +
                 TAX_PREPAYMENT);
-        double totalTax = tax * grossYearSalary;
-        double netSalary = grossYearSalary - totalTax;
+        double totalTax = tax * grossSalary;
+        double netSalary = grossSalary - totalTax;
         double netYearSalary = netSalary * 12;
         return netYearSalary;
     }
